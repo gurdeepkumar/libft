@@ -6,7 +6,7 @@
 /*   By: gukumar <gukumar@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 22:54:44 by gukumar           #+#    #+#             */
-/*   Updated: 2026/10/12 23:05:51 by gukumar          ###   ########.fr       */
+/*   Updated: 2026/10/22 00:19:34 by gukumar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 
 	if (count != 0 && size > (size_t)-1 / count)
 		return (NULL);
-	ptr = malloc(count * size);
+	ptr = (char *)malloc(count * size);
 	if (ptr == NULL)
 		return (NULL);
 	ft_bzero(ptr, (count * size));

@@ -6,7 +6,7 @@
 /*   By: gukumar <gukumar@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 23:00:37 by gukumar           #+#    #+#             */
-/*   Updated: 2026/10/11 23:00:00 by gukumar          ###   ########.fr       */
+/*   Updated: 2026/10/22 00:20:16 by gukumar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *s1)
 	size_t	len;
 
 	len = ft_strlen(s1);
-	ptr = malloc(len + 1);
+	ptr = (char *)malloc(len + 1);
 	if (ptr == NULL)
 		return (NULL);
 	while (*s1)
