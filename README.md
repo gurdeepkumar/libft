@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by <gukumar>.*
+*This project has been created as part of the 42 curriculum by gukumar*
  
 # Libft
  
@@ -10,6 +10,7 @@
 - Understand how standard libc functions work internally
 - Write norm-compliant C with proper memory management
 - Build a reusable toolkit, including a linked list API
+
 **Overview:**
 - **Part 1:** libc reimplementations (`ft_` prefix)
 - **Part 2:** additional string, memory and file descriptor utilities
@@ -45,15 +46,32 @@ cc main.c -L. -lft -o program
 ## Library description
  
 ### Part 1 - Libc functions
- 
-| Category | Functions |
-|----------|-----------|
-| Character checks | `ft_isalpha` `ft_isdigit` `ft_isalnum` `ft_isascii` `ft_isprint` |
-| Character conversion | `ft_toupper` `ft_tolower` |
-| String | `ft_strlen` `ft_strchr` `ft_strrchr` `ft_strncmp` `ft_strnstr` `ft_strlcpy` `ft_strlcat` |
-| Memory | `ft_memset` `ft_bzero` `ft_memcpy` `ft_memmove` `ft_memchr` `ft_memcmp` |
-| Conversion | `ft_atoi` |
-| Allocation | `ft_calloc` `ft_strdup` |
+
+| Function | Description |
+|----------|-------------|
+| `ft_isalpha` | Checks if a character is a letter |
+| `ft_isdigit` | Checks if a character is a digit |
+| `ft_isalnum` | Checks if a character is a letter or digit |
+| `ft_isascii` | Checks if a character is in the ASCII range (0-127) |
+| `ft_isprint` | Checks if a character is printable |
+| `ft_toupper` | Converts a lowercase letter to uppercase |
+| `ft_tolower` | Converts an uppercase letter to lowercase |
+| `ft_strlen` | Returns the length of a string |
+| `ft_strchr` | Finds the first occurrence of a character in a string |
+| `ft_strrchr` | Finds the last occurrence of a character in a string |
+| `ft_strncmp` | Compares up to `n` characters of two strings |
+| `ft_strnstr` | Finds a substring within the first `len` characters of a string |
+| `ft_strlcpy` | Copies a string with size-bounded, NUL-terminated output |
+| `ft_strlcat` | Appends a string with size-bounded, NUL-terminated output |
+| `ft_memset` | Fills a memory area with a constant byte |
+| `ft_bzero` | Sets a memory area to zero |
+| `ft_memcpy` | Copies a memory area (areas must not overlap) |
+| `ft_memmove` | Copies a memory area (safe for overlapping areas) |
+| `ft_memchr` | Finds the first occurrence of a byte in a memory area |
+| `ft_memcmp` | Compares two memory areas |
+| `ft_atoi` | Converts a string to an integer |
+| `ft_calloc` | Allocates zero-initialized memory |
+| `ft_strdup` | Duplicates a string into newly allocated memory |
  
 ### Part 2 - Additional functions
  
@@ -95,19 +113,19 @@ typedef struct s_list
  
 ### Technical choices
  
-- Part 1 not checking for null pointer args
+- Helper functions are declared `static`
+- Library built with `ar`
+- Makefile avoids unnecessary relinking
 
 ## Resources
  
 **References:**
 - [man pages](https://man7.org/linux/man-pages/) for each reimplemented function
 - [The Norm (42)](https://github.com/42School/norminette)
-- [GNU Make manual](https://www.gnu.org/software/make/manual/)
-- [Beej's Guide to C Programming](https://beej.us/guide/bgc/)
-- *The C Programming Language*, Kernighan & Ritchie
+
 **AI usage:**
+
+- **Research:** Used AI alongside the references above to understand function behavior. I instructed it to explain concepts and guide my understanding, not to provide solutions.
+- **Feedback:** Used AI to review my code after I had written the functions myself.
+- **Documentation:** Used AI to generate this README template.
  
-<!-- Fill this in honestly. Example: -->
-<!-- - Used AI to generate this README template -->
-<!-- - Not used for writing function implementations -->
-- [Describe which tasks AI was used for and which parts of the project]
