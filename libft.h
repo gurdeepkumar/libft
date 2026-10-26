@@ -6,7 +6,7 @@
 /*   By: gukumar <gukumar@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/01 17:38:33 by gukumar           #+#    #+#             */
-/*   Updated: 2026/10/09 15:10:20 by gukumar          ###   ########.fr       */
+/*   Updated: 2026/10/25 23:56:40 by gukumar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,13 @@
 // Include libs
 # include <unistd.h>
 # include <stdlib.h>
+
+// User defined data types
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 
 // Functions prototypes
 
@@ -56,5 +63,12 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+// Part 3
+t_list			*ft_lstnew(void *content);
+void			ft_lstadd_front(t_list **lst, t_list *new);
+unsigned int	ft_lstsize(t_list *lst);
+t_list			*ft_lstlast(t_list *lst);
+void			ft_lstadd_back(t_list **lst, t_list *new);
 
 #endif
